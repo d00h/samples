@@ -30,7 +30,7 @@ def old_code(src_obj1: SrcObject1, src_obj2: SrcObject2):
         id='1221',
         name=src_obj1.name,
         start=src_obj2.start,
-        end=src_obj2.start,
+        end=src_obj2.end,
         # ...
     )
 
@@ -48,7 +48,7 @@ class DstObjectBuilder:
         self._instance.name = obj.name
         return self
 
-    def with_obj2(self, obj: SrcObject1) -> 'DstObjectBuilder': 
+    def with_obj2(self, obj: SrcObject2) -> 'DstObjectBuilder': 
         self._instance.start = obj.start
         self._instance.end = obj.end
         return self
